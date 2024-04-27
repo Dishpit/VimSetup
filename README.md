@@ -4,13 +4,13 @@ This repo contains my personal Vim configuration for easy setup across multiple 
 
 ## Prerequisites
 
-Before installing this Vim config, ensure you have Vim installed with Python3 support (required for YouCompleteMe). You can verify this by running:
+Before installing this Vim configuration, ensure you have Vim installed with support for asynchronous I/O, important for plugins like `coc.nvim`. You can verify Vim's features by running:
 
 ```bash
 vim --version
 ```
 
-Make sure `+python3` appears in the output.
+Make sure `+python3` and `+job` appears in the output.
 
 ## Installation
 
@@ -39,11 +39,10 @@ Open Vim, and install the plugins by running:
 :PlugInstall
 ```
 
-### 5. Compile
-Navigate to the YouCompleteMe plugin directory and compile it:
+### 5. Setup Coc
+Navigate to your home directory and ensure the `coc.nvim` configuration is loaded correctly. Start vim and `coc.nvim` should automatically install the extensions listed in the `.vimrc` file:
 ```bash
-cd ~/.vim/plugged/YouCompleteMe
-python 3 install.py --all
+:CocInstall
 ```
 
 ## Updating
