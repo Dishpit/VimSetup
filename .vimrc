@@ -9,7 +9,6 @@ set relativenumber  " Enable relative line numbering
 set incsearch       " Incremental search
 set hlsearch        " Highlight search results
 set background=dark " Dark background
-colorscheme gruvbox " Enable gruvbox theme
 
 call plug#begin('~/.vim/plugged')
 
@@ -19,12 +18,14 @@ Plug 'morhetz/gruvbox'                          " Gruvbox theme
 
 call plug#end()
 
+colorscheme gruvbox " Enable gruvbox theme
+
 " Coc configuration
 " List of coc extensions to install on start
 let g:coc_global_extensions = [
   \ 'coc-tsserver', " JavaScript
   \ 'coc-rls',      " Rust
-  \ 'coc-go',       " Go
+  \ 'coc-go'       " Go
 ]
 
 " Recommended coc settings
