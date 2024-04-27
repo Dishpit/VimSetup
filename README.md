@@ -39,12 +39,6 @@ Open Vim, and install the plugins by running:
 :PlugInstall
 ```
 
-### 5. Setup Coc
-Navigate to your home directory and ensure the `coc.nvim` configuration is loaded correctly. Start vim and `coc.nvim` should automatically install the extensions listed in the `.vimrc` file:
-```bash
-:CocInstall
-```
-
 ## Updating
 To update plugins, open Vim and run:
 ```bash
