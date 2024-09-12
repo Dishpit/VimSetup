@@ -1,34 +1,36 @@
-syntax on           " Enable syntax highlighting
-set autoindent      " Enabled automatic indentation
-set smartindent     " Make indenting smart
-set tabstop=2       " Number of spaces that a <Tab> in the file counts for
-set shiftwidth=2    " Number of spaces to user for each step of (auto)indent
-set expandtab       " Converts tabs to white space
-set number          " Enable line numbering
-set relativenumber  " Enable relative line numbering
-set incsearch       " Incremental search
-set hlsearch        " Highlight search results
-set background=dark " Dark background
-set scrolloff=999   " Scroll offset
+syntax on                       " enable syntax highlighting
+set autoindent                  " enabled automatic indentation
+set smartindent                 " make indenting smart
+set tabstop=2                   " number of spaces per <Tab>
+set shiftwidth=2                " num of spaces per each step of autoindent
+set expandtab                   " converts tabs to white space
+set number                      " enable line numbering
+set relativenumber              " enable relative line numbering
+set incsearch                   " incremental search
+set hlsearch                    " highlight search results
+set background=dark             " dark background
+set scrolloff=999               " scroll offset
+set colorcolumn=80              " set verical line at 80 character mark
+set backspace=indent,eol,start  " set universal backspacing
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'jiangmiao/auto-pairs'                     " Auto-pairing of brackets and quotes
+Plug 'jiangmiao/auto-pairs'                     " auto-pairing of brackets and quotes
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " coc.nvim IntelliSense engine
-Plug 'morhetz/gruvbox'                          " Gruvbox theme
+Plug 'morhetz/gruvbox'                          " gruvbox theme
 
 call plug#end()
 
-colorscheme gruvbox " Enable gruvbox theme
+colorscheme gruvbox " enable gruvbox theme
 
-" Coc configuration
-" List of coc extensions to install on start
-let g:coc_global_extensions = [ 'coc-tsserver', 'coc-rls', 'coc-go' ]
+" coc configuration
+" list of coc extensions to install on start
+let g:coc_global_extensions = [ 'coc-tsserver', 'coc-java', 'coc-clangd' ]
 
-" Recommended coc settings
-set hidden          " Required by coc
-set updatetime=300  " Faster completion
-set shortmess+=c    " Avoid showing message extra message when using completion
+" coc settings
+set hidden          " required by coc
+set updatetime=300  " faster completion
+set shortmess+=c    " avoid showing message extra message when using completion
 
 " Map keys for using coc
 nnoremap <silent> gd <Plug>(coc-definition)       " Go to definition
